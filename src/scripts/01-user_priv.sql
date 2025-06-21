@@ -1,0 +1,1 @@
+ALTER ROLE bus_admin SUPERUSER;

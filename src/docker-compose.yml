@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgis/postgis
+    ports:
+      - '5432:5432'
+    environment:
+      - POSTGRES_USER=bus_admin
+      - POSTGRES_PASSWORD=bus_admin
+      - POSTGRES_DB=busInfo
+   
+    volumes:
+      - ./scripts/:/docker-entrypoint-initdb.d/     
